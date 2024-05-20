@@ -7,52 +7,61 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-
-<div class="container d-flex">
-<form>
-<div>
-    <label for="fistName">Name</label>
-    <input type="text">
-</div>
-
-<div>
-    <label for="lastName">Surname</label>
-    <input type="text">
-</div>
-
-<div>
-    <label for="age">Age</label>
-    <input type="text">
-</div>
-
-
-<div>
-    <label for="Gender">Gender:</label>
-    <label for="male">Male</label>
-    <input type="radio" name="gender"  id="male">
-    <label for="feMale" >Female</label>
-    <input type="radio" name="gender" id="feMale">
-</div>
-
-<div>
+<form id="userForm">
+    <label for="firstName">First Name:</label>
+    <input type="text" id="firstName" name="firstName" required>
+    
+    <label for="lastName">Last Name:</label>
+    <input type="text" id="lastName" name="lastName" required>
+    
+    <label for="age">Age:</label>
+    <input type="number" id="age" name="age" required>
+    
     <label for="dob">Date of Birth:</label>
-    <input type="date" id="dob" name="dob">
-</div>
+    <input type="date" id="dob" name="dob" required>
+    
+    <fieldset>
+        <label>Gender:</label>
+        <label><input type="radio" name="gender" value="Male" required> Male</label>
+        <label><input type="radio" name="gender" value="Female" required> Female</label>
+    </fieldset>
+    
+    <label for="greeting">Greeting Type:</label>
+    <select id="greeting" name="greeting" required>
+        <option value="Mr">Mr</option>
+        <option value="Mrs">Mrs</option>
+        <option value="Miss">Miss</option>
+        <option value="Doctor">Doctor</option>
+    </select>
+    
+    <fieldset>
+        <label>Subjects:</label>
+        <label><input type="checkbox" name="subjects" value="HTML"> HTML</label>
+        <label><input type="checkbox" name="subjects" value="CSS"> CSS</label>
+        <label><input type="checkbox" name="subjects" value="JavaScript"> JavaScript</label>
+        <label><input type="checkbox" name="subjects" value="Angular"> Angular</label>
+        <label><input type="checkbox" name="subjects" value="VueJS"> VueJS</label>
+    </fieldset>
+    
+    <label for="working">Are you currently working?</label>
+    
+    <label for="yes">Yes</label>
+    <input type="radio" id="yes" name="workingStatus" value="yes">
+    <label for="no">No</label>
+    <input type="radio" id="no" name="workingStatus" value="no" checked>
+    
+    <div class="working-options">
+        <label for="hours">Working Hours:</label>
+        <input type="number" id="hours" name="hours">
+        <br>
+        <label for="rate">Hourly Rate:</label>
+        <input type="number" id="rate" name="rate">
+        
+    </div>
 
-<div>
-    <label for="checkbox">Subjects:</label>
-    <label for="checkbox">HTML</label>
-    <input type="checkbox">
-    <label for="checkbox">CSS</label>
-    <input type="checkbox">
-    <label for="checkbox">JavaScript</label>
-    <input type="checkbox">
-    <label for="checkbox">Angular</label>
-    <input type="checkbox">
-</div>
-
+    <button type="submit">Calculate Salary</button>
+    <button type="reset">Reset</button>
 </form>
-</div>
 
     <script src="./script/code.js"></script>
 </body>
